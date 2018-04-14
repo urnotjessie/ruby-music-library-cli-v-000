@@ -82,7 +82,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     song_number = gets.strip.to_i
-    sorted_files = self.music_importer.files.sort_by {|file| file.split("-", 3)[1]}
+    list_songs = self.list_song
     if song_number.between?(1, sorted_files.length)
       target = sorted_files[song_number - 1].split("-", 3)
       puts "Playing #{target[1].strip} by #{target[0].strip}"
