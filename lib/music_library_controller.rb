@@ -84,7 +84,7 @@ class MusicLibraryController
     song_number = gets.strip.to_i
     list_songs = self.list_songs
     if song_number.between?(1, list_songs.length)
-      target = list_songs[song_number - 1].split("-", 3)
+      target = list_songs[song_number - 1].split(" - ")
       puts "Playing #{target[1].strip} by #{target[0].strip}"
     end
   end
