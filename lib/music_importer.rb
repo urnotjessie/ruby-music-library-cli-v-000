@@ -8,7 +8,7 @@ class MusicImporter
 
   def files
     Dir["#{@path}/*.mp3"].collect do |file|
-      file.match(/[A-Z]\w*[^.]*(....)/)[0]
+      file.match(/[A-Z]\w*[^.]*(..)*/)[0]
     end
   end
 
