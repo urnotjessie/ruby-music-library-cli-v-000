@@ -85,7 +85,7 @@ class MusicLibraryController
     song_number = gets.strip.to_i
     if song_number.between?(1, sorted_songs.length)
       target_song = sorted_songs[song_number - 1]
-      puts "Playing #{target[1].strip} by #{target[0].strip}"
+      puts "Playing #{target_song.name} by #{target_song.artist.name}"
     end
   end
 
