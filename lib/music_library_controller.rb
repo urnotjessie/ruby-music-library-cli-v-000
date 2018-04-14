@@ -38,7 +38,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    sorted_files = self.music_importer.files.sort_by {|file| file.split("-", 3)[1]}
+    sorted_files = self.files.sort_by {|file| file.split("-", 3)[1]}
     sorted_files.each_with_index do |file, index|
       puts "#{index + 1}. #{file.chomp(".mp3")}"
     end
