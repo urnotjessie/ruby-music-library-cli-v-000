@@ -80,6 +80,7 @@ class MusicLibraryController
   end
 
   def play_song
+    sorted_songs = Song.all.sort_by {|song| song.name}
     puts "Which song number would you like to play?"
     song_number = gets.strip.to_i
     if song_number.between?(1, list_songs.length)
