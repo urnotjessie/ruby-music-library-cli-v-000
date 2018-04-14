@@ -40,7 +40,7 @@ class MusicLibraryController
 
   def list_songs
     sorted_songs = Song.all.sort_by {|song| song.name}
-    sorted_songs.each_with_index do |file, index|
+    sorted_songs.each_with_index do |song, index|
       puts "#{index + 1}. #{file.chomp(".mp3")}"
     end
   end
